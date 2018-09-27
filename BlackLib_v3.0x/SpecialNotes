@@ -1,0 +1,11 @@
+The following files are not required:
+1. examples.cpp
+2. BlackThread.cpp
+3. BlackMutex.cpp
+
+To exclude them from being compiled, and 'x' is placed as 
+1. examples.cppx
+2. BlackThread.cppx
+3. BlackMutex.cppx
+
+

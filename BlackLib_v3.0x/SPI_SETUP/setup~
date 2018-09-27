@@ -1,0 +1,18 @@
+#! /bin/bash
+
+
+dtc -O dtb -o BLACKLIB-SPI0-00A0.dtbo -b 0 -@ BLACKLIB-SPI0-00A0.dts
+
+dtc -O dtb -o BLACKLIB-SPI1-00A0.dtbo -b 0 -@ BLACKLIB-SPI1-00A0.dts
+
+
+scp BLACKLIB-SPI0-00A0.dtbo BLACKLIB-SPI1-00A0.dtbo ubuntu@192.168.7.2:Desktop
+
+ssh ubuntu@192.168.7.2 
+
+sudo cp -r BLACKLIB-SPI0-00A0.dtbo BLACKLIB-SPI1-00A0.dtbo /lib/firmware
+
+sudo rm -rf BLACKLIB-SPI*
+
+
+

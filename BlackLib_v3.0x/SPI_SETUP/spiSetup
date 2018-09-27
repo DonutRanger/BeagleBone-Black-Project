@@ -1,0 +1,19 @@
+#! /bin/bash
+# After running this script, check that dtbo files are in /lib/firmware
+# In Desktop, rm BLACK*.dtbo
+
+scp BLACKLIB-SPI0-00A0.dtbo BLACKLIB-SPI1-00A0.dtbo debian@192.168.7.2:Desktop
+
+ssh debian@192.168.7.2
+
+cd Desktop 
+
+#Transfering dtbo files to /lib/firmware
+sudo cp -r BLACKLIB-SPI0-00A0.dtbo BLACKLIB-SPI1-00A0.dtbo /lib/firmware
+sudo rm  *.dtbo
+
+
+
+
+
+
